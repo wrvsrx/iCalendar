@@ -1,8 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Text.ICalendar.Parser.Parameters where
 
+import           Control.Monad
 import           Control.Applicative
-import           Control.Monad.Error
+import           Control.Monad.Except
 import           Control.Monad.RWS          (MonadWriter (tell))
 import           Data.ByteString.Lazy.Char8 (ByteString)
 import qualified Data.ByteString.Lazy.Char8 as B

@@ -3,9 +3,10 @@
 {-# LANGUAGE FlexibleContexts  #-}
 module Text.ICalendar.Parser.Components where
 
+import           Control.Monad
 import           Control.Applicative
 import           Control.Arrow        ((&&&))
-import           Control.Monad.Error  hiding (mapM)
+import           Control.Monad.Except
 import           Control.Monad.RWS    (MonadState (get), tell)
 import qualified Data.CaseInsensitive as CI
 import qualified Data.Foldable        as F
